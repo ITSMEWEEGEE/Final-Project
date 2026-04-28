@@ -52,10 +52,17 @@ public class App extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-
-            refreshList(listPanel, myList);            
-
-    }});
+            Component[] components = listPanel.getComponents();
+            for (int i = 0; i < components.length; i++){  
+            
+            if (components[i] instanceof JCheckBox){
+                String newText = inputField.getText();
+                myList.editItem(i, newText);
+                
+                refreshList(listPanel, myList);
+                break;            
+            }
+    }}});
 
         RemoveButton.addActionListener(new ActionListener() {
 
