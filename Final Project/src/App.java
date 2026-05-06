@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.util.Scanner;
 
 public class App extends JFrame {
     
@@ -11,9 +10,9 @@ public class App extends JFrame {
               /** Scanner scanner = new Scanner(System.in); */
        
        
-         TheList myList = new TheList();
+         TheList List = new TheList();
 
-        
+        //* This is the main interface layout */
         JFrame mainFrame = new JFrame();
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.setTitle("To Do List");
@@ -41,13 +40,14 @@ public class App extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String text = inputField.getText();
-                myList.AddItems(text);
-                refreshList(listPanel, myList);
+                List.AddItems(text);
+                refreshList(listPanel, List);
                 inputField.setText("");
                 listPanel.revalidate();
                 listPanel.repaint();
             }
         });
+        //* The Edit Button is editing the first item */
          EditButton.addActionListener(new ActionListener() {
 
             @Override
@@ -55,11 +55,13 @@ public class App extends JFrame {
             Component[] components = listPanel.getComponents();
             for (int i = 0; i < components.length; i++){  
             
-            if (components[i] instanceof JCheckBox){
+            JCheckBox box = (JCheckBox) components[i];
+          if (box.isSelected()) {
                 String newText = inputField.getText();
-                myList.editItem(i, newText);
+                List.editItem(i, newText);
+                inputField.setText("");
+                refreshList(listPanel, List);
                 
-                refreshList(listPanel, myList);
                 break;            
             }
     }}});
@@ -72,9 +74,9 @@ public class App extends JFrame {
         for (int i = components.length - 1; i >= 0; i--) {
              JCheckBox box = (JCheckBox) components[i];
             if (box.isSelected()) {
-        myList.RemoveItems(i);}
+        List.RemoveItems(i);}
             }
-                refreshList(listPanel, myList);    
+                refreshList(listPanel, List);    
         }
         });
          ClearButton.addActionListener(new ActionListener() {

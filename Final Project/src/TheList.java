@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import javax.swing.JCheckBox;
-
 
 public class TheList {
      private ArrayList<String> list = new ArrayList<>();
