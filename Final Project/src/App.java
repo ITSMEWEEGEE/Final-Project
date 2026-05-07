@@ -29,11 +29,11 @@ public class App extends JFrame {
         JButton AddButton = new JButton("Add Item");
         JButton EditButton = new JButton("Edit Item");
         JButton RemoveButton = new JButton("Remove Item");
-        JButton ClearButton = new JButton("Clear");
+    
         bottomPanel.add(AddButton);
         bottomPanel.add(EditButton);
         bottomPanel.add(RemoveButton);
-        bottomPanel.add(ClearButton);
+    
         
         AddButton.addActionListener(new ActionListener() {
 
@@ -79,12 +79,7 @@ public class App extends JFrame {
                 refreshList(listPanel, List);    
         }
         });
-         ClearButton.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                
-            }});
+        
 
         mainFrame.add(bottomPanel, BorderLayout.SOUTH);
            
