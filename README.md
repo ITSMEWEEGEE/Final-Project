@@ -13,7 +13,7 @@ The workspace contains two folders by default, where:
 This project teaches the use of Swing
 
 # How to use it?
-    There is a textfield bottom of the program. In order to add items to the list, first the user fill out the textfield with any item then press the add button. 
+    There is a textfield bottom of the program. In order to add items to the list, first the user fill out the textfield with any item then press the add button. Use the checkmark as selecting the item on the list to edits and remove them. 
     
 ## Dependency Management
 
