@@ -87,9 +87,9 @@ public class App extends JFrame {
       
     }
 
-    public static void refreshList(JPanel listPanel, TheList myList){
+    public static void refreshList(JPanel listPanel, TheList List){
         listPanel.removeAll();
-    for (String item : myList.getlist()) {
+    for (String item : List.getlist()) {
         listPanel.add(new JCheckBox(item));
     }
     listPanel.revalidate();
