@@ -18,8 +18,7 @@ public class TheList {
     public void editItem(int index, String newText){
         list.set(index, newText);
     }
-    public void clearAll(){
-    }
+    
      public ArrayList<String> getlist() {
         return list;
     }
