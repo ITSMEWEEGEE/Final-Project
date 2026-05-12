@@ -7,12 +7,14 @@ public class App extends JFrame {
     
     
     public static void main(String[] args) throws Exception {
-              /** Scanner scanner = new Scanner(System.in); */
        
        
          TheList List = new TheList();
 
-        //* This is the main interface layout */
+        
+        /**
+        * This is the main interface layout
+        */
         JFrame mainFrame = new JFrame();
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.setTitle("To Do List");
@@ -23,7 +25,7 @@ public class App extends JFrame {
         listPanel.setLayout(new BoxLayout(listPanel, BoxLayout.Y_AXIS));
         JTextField inputField = new JTextField(20);
         mainFrame.add(listPanel, BorderLayout.CENTER);
-        JPanel centralPanel = new JPanel();
+        
        JPanel bottomPanel = new JPanel();
         bottomPanel.add(inputField);
         JButton AddButton = new JButton("Add Item");
@@ -34,7 +36,11 @@ public class App extends JFrame {
         bottomPanel.add(EditButton);
         bottomPanel.add(RemoveButton);
     
-        
+        /**
+        * This is add button where it add values like items into the arrays list
+        * @param input items
+        * @return list
+        */
         AddButton.addActionListener(new ActionListener() {
 
             @Override
@@ -47,7 +53,12 @@ public class App extends JFrame {
                 listPanel.repaint();
             }
         });
-        //* The Edit Button is editing the first item */
+        /**
+         * The Edit button where it changes the name or the items from the arrays list based on the checkmark
+         * @param items and input
+        * @return edited items
+         */
+    
          EditButton.addActionListener(new ActionListener() {
 
             @Override
@@ -65,7 +76,11 @@ public class App extends JFrame {
                 break;            
             }
     }}});
-
+        /**
+     * The remove button remove items from the arraylist that are check marked 
+     * @param items
+     * @return removal of items from array list
+     */
         RemoveButton.addActionListener(new ActionListener() {
 
             @Override
