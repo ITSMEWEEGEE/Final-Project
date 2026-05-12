@@ -2,6 +2,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+/**This program is to do list with a checklist using Swing
+ * @author Joshua Osuna
+ * @since 4/27/2026
+ */
 
 public class App extends JFrame {
     
