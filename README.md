@@ -5,7 +5,7 @@ Welcome to my final project of To-Do-List in Java.  It runs on the Swing Gui. Th
 
 ## Made by Joshua Osuna
 # How to use it?
-    There is a textfield bottom of the program. In order to add items to the list, first the user fill out the textfield with any item then press the add button. Use the checkmark as selecting the item on the list to edits and remove them. 
+    There is a textfield bottom of the program. In order to add items to the list, first the user fill out the textfield with any item then press the add button. Use the checkmark as selecting the item on the list to edits and remove them. To edit the items, the user must fillout the textbox and select the items they want to edit and as well they can edit multi items to be same label. To remove items, user must select items that they wish to remove and click on the remove item.
    
 
 This project teaches the use of Swing
